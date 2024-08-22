@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import logo from '../assets/image/logo.png'
 
 const Navbar = () => {
-  const LinkClass = ({isActive}) => isActive ? "text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2":"text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2";
+  const LinkClass = ({isActive}) => isActive ? "text-black bg-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2":"text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2";
   return (
     <>
     <nav className="bg-gradient-to-t from-purple-800 to-purple-400 border-b border-purple-200">

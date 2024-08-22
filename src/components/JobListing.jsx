@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import {FaMapMarked} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { FaBookOpen } from 'react-icons/fa6'
 
 const JobListing = ({job}) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
@@ -11,7 +12,7 @@ const JobListing = ({job}) => {
     description = description.substring(0, 90) + '...';
   }
   return (
-    <div className="bg-white rounded-xl shadow-md relative">
+    <div className="bg-gray-200 rounded-xl shadow-md relative">
             <div className="p-4">
               <div className="mb-6">
                 <div className="text-gray-600 my-2">{job.type}</div>
@@ -19,7 +20,7 @@ const JobListing = ({job}) => {
               </div>
   
               <div className="mb-5">
-               {description}   <button onClick={() => setShowFullDescription((prevState)=> !prevState)}  className="text-indigo-400 mb-5 font-semibold hover:text-indigo-700">{showFullDescription ? 'Less' : 'More'}</button>
+               {description}   <button onClick={() => setShowFullDescription((prevState)=> !prevState)}  className="text-indigo-400 mb-5 font-semibold hover:text-indigo-700 ">{showFullDescription ? 'Less' : 'More'}</button>
               </div>
               
   
@@ -33,10 +34,10 @@ const JobListing = ({job}) => {
                   {job.location}
                 </div>
                 <Link
-                  to={`/job/${job.id}`}
-                  className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm"
+                  to={`/jobs/${job.id}`}
+                  className="h-[36px] bg-indigo-500 hover:bg-white text-white px-4 py-2 rounded-lg text-center text-sm hover:border-t-2 border-b-2 hover:border-black hover:text-black "
                 >
-                 Read More
+                 <FaBookOpen className='inline pr-1 text-xl mb-1'/>Read More
                 </Link>
               </div>
             </div>
